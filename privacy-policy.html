@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIRgroup — Privacy Policy</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0f14;
+      --surface: #161a23;
+      --border: #252b38;
+      --accent: #6c63ff;
+      --accent2: #ff6584;
+      --text: #e8eaf0;
+      --muted: #7b82a0;
+      --card: #1c2130;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,15,20,.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-size: 1.2rem; font-weight: 700; letter-spacing: .5px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: .9rem;
+      transition: color .2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+
+    .page-header {
+      background: linear-gradient(135deg, rgba(108,99,255,.1), rgba(255,101,132,.05));
+      border-bottom: 1px solid var(--border);
+      padding: 3.5rem 2rem 3rem;
+      text-align: center;
+    }
+    .page-header .badge {
+      display: inline-block;
+      background: rgba(255,101,132,.1); border: 1px solid rgba(255,101,132,.3);
+      color: #ff9fb3; font-size: .75rem; letter-spacing: .8px; text-transform: uppercase;
+      padding: .3rem .8rem; border-radius: 100px; margin-bottom: 1.2rem;
+    }
+    .page-header h1 {
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
+      background: linear-gradient(135deg, var(--text), var(--muted));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: .7rem;
+    }
+    .page-header .date { color: var(--muted); font-size: .9rem; }
+
+    main { flex: 1; max-width: 820px; width: 100%; margin: 0 auto; padding: 3rem 2rem; }
+
+    .toc {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.5rem 1.75rem; margin-bottom: 3rem;
+    }
+    .toc h2 { font-size: .85rem; text-transform: uppercase; letter-spacing: .8px; color: var(--muted); margin-bottom: 1rem; }
+    .toc ul { list-style: none; padding: 0; }
+    .toc li { margin-bottom: .4rem; }
+    .toc a { color: var(--accent); text-decoration: none; font-size: .9rem; transition: opacity .2s; }
+    .toc a:hover { opacity: .7; }
+
+    .section { margin-bottom: 3rem; }
+    .section h2 {
+      font-size: 1.35rem; font-weight: 700;
+      color: var(--text); margin-bottom: 1rem;
+      padding-bottom: .6rem; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: .6rem;
+    }
+    .section h2 .icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: .9rem; flex-shrink: 0;
+    }
+    .section h3 { font-size: 1rem; font-weight: 600; color: var(--text); margin: 1.4rem 0 .6rem; }
+    .section p { color: #b0b8d0; line-height: 1.8; margin-bottom: .9rem; font-size: .95rem; }
+    .section ul, .section ol { padding-left: 1.4rem; margin-bottom: .9rem; }
+    .section li { color: #b0b8d0; line-height: 1.8; font-size: .95rem; margin-bottom: .3rem; }
+    .section strong { color: var(--text); }
+
+    .callout {
+      background: rgba(108,99,255,.07); border: 1px solid rgba(108,99,255,.2);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0;
+      color: #b0b8d0; font-size: .9rem; line-height: 1.7;
+    }
+
+    .data-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: .75rem; margin: 1rem 0;
+    }
+    .data-item {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; padding: .9rem 1.1rem;
+      font-size: .85rem; color: #b0b8d0; line-height: 1.5;
+    }
+    .data-item strong { display: block; color: var(--text); margin-bottom: .2rem; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; }
+
+    .contact-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.5rem; margin: 1rem 0;
+      display: flex; gap: 1rem; align-items: flex-start;
+    }
+    .contact-card .icon { font-size: 1.5rem; flex-shrink: 0; }
+    .contact-card p { margin: 0; font-size: .9rem; }
+    .contact-card a { color: var(--accent); text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center; padding: 2rem;
+      color: var(--muted); font-size: .8rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--muted); text-decoration: none; transition: color .2s; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-top: .6rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">VIRgroup</a>
+  <div class="nav-links">
+    <a href="index.html">Contact</a>
+    <a href="terms-of-service.html">Terms</a>
+    <a href="privacy-policy.html" class="active">Privacy</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="badge">Privacy</div>
+  <h1>Privacy Policy</h1>
+  <div class="date">Effective Date: February 21, 2021</div>
+</div>
+
+<main>
+
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#data-collect">The Data We Collect</a></li>
+      <li><a href="#why">Why Do We Collect Your Data</a></li>
+      <li><a href="#who">Who Can See Your Data</a></li>
+      <li><a href="#transfers">International Data Transfers</a></li>
+      <li><a href="#rights">Your Rights and Options</a></li>
+      <li><a href="#cookies">Cookies and Similar Technologies</a></li>
+      <li><a href="#protect">How We Protect Your Data</a></li>
+      <li><a href="#children">Children</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <p>This Privacy Policy describes the ways we collect personal data about you and why we do so, how we use your personal data, and the choices you have about your personal data.</p>
+    <p>This Privacy Policy applies to VIRgroup's games, websites and related services, which we here collectively call the Service. We may periodically update this Privacy Policy by posting a new version on virgroup.xyz.</p>
+  </div>
+
+  <div class="section" id="contact">
+    <h2><span class="icon">✉️</span> Contact Us</h2>
+    <p>If you have questions about data protection, or have any requests for resolving issues with your personal data, we encourage you to primarily contact us through the support features within each VIRgroup game.</p>
+    <div class="contact-card">
+      <div class="icon">🏢</div>
+      <div>
+        <p><strong>Name of the controller:</strong> VIRgroup</p>
+        <p><strong>Email:</strong> <a href="mailto:support@virgroup.xyz">support@virgroup.xyz</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="data-collect">
+    <h2><span class="icon">📦</span> The Data We Collect</h2>
+    <h3>Data you provide us directly</h3>
+    <div class="data-grid">
+      <div class="data-item"><strong>Contact Info</strong>Name, email address, phone numbers</div>
+      <div class="data-item"><strong>Account</strong>Player name, tag, and password</div>
+      <div class="data-item"><strong>Profile</strong>Profile photo and preferences</div>
+      <div class="data-item"><strong>Messages</strong>Chat logs and player support tickets</div>
+      <div class="data-item"><strong>Other</strong>Data to identify a lost account or participate in surveys</div>
+    </div>
+    <h3>Data we collect automatically</h3>
+    <div class="data-grid">
+      <div class="data-item"><strong>Account Data</strong>Game progress and internal account ID</div>
+      <div class="data-item"><strong>Device Info</strong>IP address, device identifiers, OS, browser type</div>
+      <div class="data-item"><strong>Location</strong>Approximate location derived from IP address</div>
+      <div class="data-item"><strong>Gameplay</strong>Gameplay data and interactions with other players</div>
+      <div class="data-item"><strong>Cookies</strong>Data collected via cookies and similar technologies</div>
+    </div>
+    <h3>Data we collect from our partners</h3>
+    <ul>
+      <li>Data received if you link a third party tool (Facebook, WeChat or Google)</li>
+      <li>Demographic data (coarse location of your IP address)</li>
+      <li>Data to fight fraud (refund abuse, click fraud)</li>
+      <li>Data from platforms that the games run on (to verify payment)</li>
+      <li>Data for advertising and analytics purposes</li>
+    </ul>
+  </div>
+
+  <div class="section" id="why">
+    <h2><span class="icon">🎯</span> Why Do We Collect Your Data</h2>
+    <h3>To make the Service work</h3>
+    <ul>
+      <li>Create accounts and allow you to play our games</li>
+      <li>Operate the Service and verify payments</li>
+      <li>Provide and deliver products and services you request</li>
+      <li>Send you Service-related communications</li>
+    </ul>
+    <h3>To make the Service more suitable for our players</h3>
+    <ul>
+      <li>Update and develop player profiles</li>
+      <li>Develop and improve the Service and player experience</li>
+      <li>Provide social features as part of the Service</li>
+      <li>Respond to your comments and questions and provide player support</li>
+      <li>Enable you to communicate with other players</li>
+    </ul>
+    <h3>To show personalized advertisements</h3>
+    <ul>
+      <li>Track the content you access in connection with the Service</li>
+      <li>Deliver, target and improve our advertising and the Service</li>
+    </ul>
+    <h3>To keep the Service safe and fair</h3>
+    <ul>
+      <li>Analyze and monitor use of the Service and its social features</li>
+      <li>Moderate chats either automatically or manually</li>
+      <li>Take action against fraudulent or misbehaving players</li>
+    </ul>
+  </div>
+
+  <div class="section" id="who">
+    <h2><span class="icon">👥</span> Who Can See Your Data</h2>
+    <h3>Other players and users</h3>
+    <p>Social features are a core component of our games. Other players and users may see your profile data, in-game activities and read the messages you have posted.</p>
+    <h3>Our Service Providers</h3>
+    <p>VIRgroup has vendors to provide the Services. These vendors process your data only at and according to VIRgroup's instructions for tasks such as hosting, player support, advertising, analytics and fraud prevention.</p>
+    <h3>Other companies and public authorities</h3>
+    <p>In order to combat fraud and illegal activity, we may process and disclose data with other companies and organizations and provide it to public authorities in response to lawful requests.</p>
+  </div>
+
+  <div class="section" id="transfers">
+    <h2><span class="icon">🌍</span> International Data Transfers</h2>
+    <p>Our Service is global by nature and your data can therefore be transferred to anywhere in the world. Because different countries may have different data protection laws than your own country, we take steps to ensure adequate safeguards are in place to protect your data.</p>
+    <p>Adequate safeguards we may use include standard contractual clauses approved by EU Commission and other lawful safeguards.</p>
+  </div>
+
+  <div class="section" id="rights">
+    <h2><span class="icon">🔑</span> Your Rights and Options</h2>
+    <h3>Push Notifications</h3>
+    <p>We may send you push notifications through our mobile applications. You may at any time opt-out by changing the settings on your mobile device.</p>
+    <h3>Access your personal data</h3>
+    <p>If you request, we will provide you a copy of your personal data in an electronic format.</p>
+    <h3>Your other rights</h3>
+    <ul>
+      <li>The right to <strong>correct</strong> your data</li>
+      <li>The right to have your data <strong>deleted</strong></li>
+      <li>The right to <strong>object</strong> how we use or share your data</li>
+      <li>The right to <strong>restrict</strong> how we use or share your data</li>
+      <li>The right to <strong>withdraw consent</strong> at any time</li>
+    </ul>
+    <div class="callout">To exercise any of these rights, please use the support options described in the "Contact Us" section above. We will respond to all requests in accordance with applicable laws.</div>
+  </div>
+
+  <div class="section" id="cookies">
+    <h2><span class="icon">🍪</span> Cookies and Similar Technologies</h2>
+    <p>Like most online services, we and our partners use cookies and similar technologies to provide and personalize the Service, analyse use, target advertisements and prevent fraud.</p>
+    <p>We and our partners collect and store information about users' interactions with unaffiliated websites and applications that use our technologies. This allows us to:</p>
+    <ul>
+      <li>Detect and prevent fraud</li>
+      <li>Allow users to use the Service on one device and pick up seamlessly on another</li>
+      <li>Analytics, personalization and attribution</li>
+      <li>Limit the number of times a user is shown the same advertisement</li>
+      <li>Provide personalized advertising on each device</li>
+    </ul>
+    <p>You can disable cookies in your browser settings, but some parts of the Service may then not function properly.</p>
+  </div>
+
+  <div class="section" id="protect">
+    <h2><span class="icon">🔒</span> How We Protect Your Data</h2>
+    <h3>Security Safeguards</h3>
+    <p>We are continuously developing and implementing administrative, technical and physical security measures to protect your data from unauthorized access or against loss, misuse or alteration.</p>
+    <h3>Data Retention</h3>
+    <p>We retain your data for as long as your account is active or as needed to provide you the Service. We may periodically de-identify unused game accounts and regularly review and de-identify unnecessary data.</p>
+    <div class="callout">If you ask us to remove your personal data, we will retain your data as necessary for our legitimate business interests, such as to comply with our legal obligations, resolve disputes, and enforce our agreements.</div>
+  </div>
+
+  <div class="section" id="children">
+    <h2><span class="icon">👶</span> Children</h2>
+    <p>Protecting children's privacy online is very important to us. Generally, our Services are not directed to children under 13 (or other age as required by local law), and the Services do not knowingly collect personal data from children.</p>
+    <p>For games that may appeal to children, we take additional steps to limit access based on the player's age. When a player indicates they are under 13, we will limit their access to certain features, such as social media and chat features.</p>
+    <p>If you are a parent or guardian and wish to review personal data collected from your child, or have that information modified or deleted, you may contact us as described above.</p>
+  </div>
+
+</main>
+
+<footer>
+  <div>© 2024 VIRgroup. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Contact</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+  </div>
+</footer>
+
+</body>
+</html>

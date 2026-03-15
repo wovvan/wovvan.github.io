@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIRgroup — Contact</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0f14;
+      --surface: #161a23;
+      --border: #252b38;
+      --accent: #6c63ff;
+      --accent2: #ff6584;
+      --text: #e8eaf0;
+      --muted: #7b82a0;
+      --card: #1c2130;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,15,20,.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-size: 1.2rem; font-weight: 700; letter-spacing: .5px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: .9rem;
+      transition: color .2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+
+    /* ── HERO ── */
+    .hero {
+      flex: 1;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 6rem 2rem 4rem;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(108,99,255,.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(108,99,255,.12); border: 1px solid rgba(108,99,255,.3);
+      color: #a9a3ff; font-size: .8rem; letter-spacing: .8px; text-transform: uppercase;
+      padding: .35rem .9rem; border-radius: 100px; margin-bottom: 2rem;
+    }
+    .hero-badge span { width: 6px; height: 6px; border-radius: 50%; background: #6c63ff; }
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800; letter-spacing: -.5px; line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+    h1 span {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero-sub {
+      font-size: 1.1rem; color: var(--muted); max-width: 480px; line-height: 1.6;
+      margin-bottom: 3rem;
+    }
+
+    /* ── CARDS ── */
+    .cards {
+      display: flex; flex-wrap: wrap; gap: 1.25rem;
+      justify-content: center; max-width: 700px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      display: flex; align-items: center; gap: 1.25rem;
+      text-decoration: none; color: inherit;
+      transition: transform .2s, border-color .2s, box-shadow .2s;
+      flex: 1; min-width: 260px;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      box-shadow: 0 8px 32px rgba(108,99,255,.15);
+    }
+    .card-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; flex-shrink: 0;
+    }
+    .card-icon.email { background: rgba(108,99,255,.15); }
+    .card-icon.insta { background: rgba(255,101,132,.15); }
+    .card-label { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .8px; margin-bottom: .2rem; }
+    .card-value { font-size: 1rem; font-weight: 500; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center; padding: 2rem;
+      color: var(--muted); font-size: .8rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--muted); text-decoration: none; transition: color .2s; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-top: .6rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">VIRgroup</a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Contact</a>
+    <a href="terms-of-service.html">Terms</a>
+    <a href="privacy-policy.html">Privacy</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge"><span></span> Get in touch</div>
+  <h1>Contact <span>VIRgroup</span></h1>
+  <p class="hero-sub">Have questions or need support? Reach out through any of the channels below and we'll get back to you.</p>
+
+  <div class="cards">
+    <a class="card" href="mailto:efanov1993@gmail.com">
+      <div class="card-icon email">✉️</div>
+      <div>
+        <div class="card-label">Email</div>
+        <div class="card-value">efanov1993@gmail.com</div>
+      </div>
+    </a>
+    <a class="card" href="https://www.instagram.com/vladimir.efanov" target="_blank" rel="noopener">
+      <div class="card-icon insta">📸</div>
+      <div>
+        <div class="card-label">Instagram</div>
+        <div class="card-value">@vladimir.efanov</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>© 2024 VIRgroup. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIRgroup — Terms of Service</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0f14;
+      --surface: #161a23;
+      --border: #252b38;
+      --accent: #6c63ff;
+      --accent2: #ff6584;
+      --text: #e8eaf0;
+      --muted: #7b82a0;
+      --card: #1c2130;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,15,20,.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-size: 1.2rem; font-weight: 700; letter-spacing: .5px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: .9rem;
+      transition: color .2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: linear-gradient(135deg, rgba(108,99,255,.1), rgba(255,101,132,.05));
+      border-bottom: 1px solid var(--border);
+      padding: 3.5rem 2rem 3rem;
+      text-align: center;
+    }
+    .page-header .badge {
+      display: inline-block;
+      background: rgba(108,99,255,.12); border: 1px solid rgba(108,99,255,.3);
+      color: #a9a3ff; font-size: .75rem; letter-spacing: .8px; text-transform: uppercase;
+      padding: .3rem .8rem; border-radius: 100px; margin-bottom: 1.2rem;
+    }
+    .page-header h1 {
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
+      background: linear-gradient(135deg, var(--text), var(--muted));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: .7rem;
+    }
+    .page-header .date { color: var(--muted); font-size: .9rem; }
+
+    /* ── CONTENT ── */
+    main { flex: 1; max-width: 820px; width: 100%; margin: 0 auto; padding: 3rem 2rem; }
+
+    .toc {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.5rem 1.75rem; margin-bottom: 3rem;
+    }
+    .toc h2 { font-size: .85rem; text-transform: uppercase; letter-spacing: .8px; color: var(--muted); margin-bottom: 1rem; }
+    .toc ol { padding-left: 1.2rem; }
+    .toc li { margin-bottom: .4rem; }
+    .toc a { color: var(--accent); text-decoration: none; font-size: .9rem; transition: opacity .2s; }
+    .toc a:hover { opacity: .7; }
+
+    .section { margin-bottom: 3rem; }
+    .section h2 {
+      font-size: 1.35rem; font-weight: 700;
+      color: var(--text); margin-bottom: 1rem;
+      padding-bottom: .6rem; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: .6rem;
+    }
+    .section h2 .num {
+      width: 28px; height: 28px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: .75rem; font-weight: 800; color: #fff; flex-shrink: 0;
+    }
+    .section h3 { font-size: 1rem; font-weight: 600; color: var(--text); margin: 1.4rem 0 .6rem; }
+    .section p { color: #b0b8d0; line-height: 1.8; margin-bottom: .9rem; font-size: .95rem; }
+    .section ul, .section ol { padding-left: 1.4rem; margin-bottom: .9rem; }
+    .section li { color: #b0b8d0; line-height: 1.8; font-size: .95rem; margin-bottom: .3rem; }
+    .section strong { color: var(--text); }
+
+    .callout {
+      background: rgba(108,99,255,.07); border: 1px solid rgba(108,99,255,.2);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0;
+      color: #b0b8d0; font-size: .9rem; line-height: 1.7;
+    }
+
+    footer {
+      text-align: center; padding: 2rem;
+      color: var(--muted); font-size: .8rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--muted); text-decoration: none; transition: color .2s; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-top: .6rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">VIRgroup</a>
+  <div class="nav-links">
+    <a href="index.html">Contact</a>
+    <a href="terms-of-service.html" class="active">Terms</a>
+    <a href="privacy-policy.html">Privacy</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="badge">Legal</div>
+  <h1>Terms of Service</h1>
+  <div class="date">Effective Date: February 21, 2021</div>
+</div>
+
+<main>
+
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s1">License</a></li>
+      <li><a href="#s2">Ownership</a></li>
+      <li><a href="#s3">User Content</a></li>
+      <li><a href="#s4">Fees and Purchase Terms</a></li>
+      <li><a href="#s5">Updates to the Service</a></li>
+      <li><a href="#s6">Disclaimer of Warranties</a></li>
+      <li><a href="#s7">Limitation of Liability</a></li>
+      <li><a href="#s8">Dispute Resolution and Law</a></li>
+      <li><a href="#s9">Severability</a></li>
+      <li><a href="#s10">General Provisions</a></li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <p>The terms of this agreement ("Terms of Service") govern the relationship between you and VIRgroup, a Russian company (hereinafter "VIRgroup" or "Us" or "We") regarding your use of VIRgroup's games, websites and related services (the "Service"). Use of the Service is also governed by VIRgroup's Privacy Policy and other relevant policies, which are incorporated herein by reference.</p>
+    <p>Before accessing or using the Service, you must agree to these Terms of Service and the Privacy Policy. By registering for an Account or otherwise using the Service, you affirm that you are the legal age of majority in your country of residence.</p>
+    <div class="callout">BY INSTALLING, USING OR OTHERWISE ACCESSING THE SERVICE, YOU AGREE TO THESE TERMS OF SERVICE. IF YOU DO NOT AGREE, PLEASE DO NOT INSTALL, USE OR OTHERWISE ACCESS THE SERVICE.</div>
+  </div>
+
+  <div class="section" id="s1">
+    <h2><span class="num">1</span> License</h2>
+    <h3>1.1 Grant of a Limited License</h3>
+    <p>VIRgroup grants you a non-exclusive, non-transferable, non-sublicensable, revocable and limited license to access and use the Service for your own non-commercial entertainment purposes.</p>
+    <p>The following restrictions apply:</p>
+    <ul>
+      <li>You accept full responsibility for any unauthorized use of the Service by minors.</li>
+      <li>You shall not purchase, sell, rent or give away your Account, or create an Account using a false identity.</li>
+      <li>You shall use your Account only for non-commercial purposes.</li>
+    </ul>
+    <h3>Login Information and Your Account</h3>
+    <p>You shall not share your Account or Login Information, nor let anyone else access your Account. In the event of any breach of security, you must immediately notify VIRgroup. You are solely responsible for maintaining the confidentiality of the Login Information.</p>
+    <h3>License Limitations</h3>
+    <p>You agree that you will not, under any circumstances:</p>
+    <ul>
+      <li>Use cheats, exploits, automation software, emulators, bots, hacks, mods or any unauthorized third-party software.</li>
+      <li>Modify or cause to be modified any files that are a part of the Service without VIRgroup's express written consent.</li>
+      <li>Disrupt, interfere with or otherwise adversely affect the normal flow of the Service.</li>
+      <li>Institute, assist, or become involved in any type of attack, including distribution of a virus or denial of service attacks.</li>
+      <li>Attempt to gain unauthorized access to the Service or to computers, Servers, or networks connected to the Service.</li>
+      <li>Post any information that is abusive, threatening, obscene, defamatory, libelous, or otherwise objectionable.</li>
+      <li>Reverse engineer, decompile, disassemble or otherwise attempt to derive the source code for any underlying software.</li>
+      <li>Collect or post anyone's private information, including personally identifiable information.</li>
+    </ul>
+    <h3>1.2 Suspension and Termination</h3>
+    <div class="callout">VIRgroup may limit, suspend, terminate, modify, or delete Accounts or access to the Service if you are failing to comply with any of these Terms of Service or for any actual or suspected illegal or improper use of the Service.</div>
+    <p>VIRgroup reserves the right to terminate any Account that has been inactive for 180 days. You may terminate your Account at any time by informing VIRgroup by email at <strong>support@virgroup.xyz</strong>.</p>
+  </div>
+
+  <div class="section" id="s2">
+    <h2><span class="num">2</span> Ownership</h2>
+    <h3>2.1 Games and Service</h3>
+    <p>All rights, title and interest in and to the Service are owned by VIRgroup. VIRgroup reserves all rights, including all intellectual property rights or other proprietary rights, in connection with its games and the Service.</p>
+    <h3>2.2 Accounts</h3>
+    <p>You acknowledge and agree that you shall have no ownership or other property interest in the Account, and all rights in and to the Account are and shall forever be owned by VIRgroup.</p>
+    <h3>2.3 Virtual Items</h3>
+    <p>VIRgroup owns, has licensed, or otherwise has rights to use all of the content that appears in the Service or in VIRgroup games. You agree that you have no right or title in or to any content that appears in the Service, including virtual goods or currency.</p>
+  </div>
+
+  <div class="section" id="s3">
+    <h2><span class="num">3</span> User Content</h2>
+    <h3>3.1 Submission of User Content</h3>
+    <p>"User Content" means any communications, images, sounds, and all the material, data, and information that you upload or transmit through a VIRgroup game client or the Service. By transmitting or submitting any User Content, you affirm that such submission is accurate, not confidential or misleading, and not in violation of any laws.</p>
+    <h3>3.1.1 Content Screening</h3>
+    <p>VIRgroup assumes no responsibility for monitoring the Service for inappropriate content or conduct. VIRgroup reserves the right to review, monitor, prohibit, edit, delete, or disable access to any User Content without notice for any reason.</p>
+    <h3>3.2 Information Use</h3>
+    <p>The Service may include various forums, blogs and chat features. VIRgroup cannot guarantee that other members will not use the ideas and information that you share. You are solely responsible for the information that you post on or through the Service.</p>
+    <h3>3.3 Your License to VIRgroup</h3>
+    <p>You hereby grant to VIRgroup an irrevocable, perpetual, transferable, fully paid-up, royalty-free, worldwide license to copy, reproduce, adapt, modify, publish, distribute, sell, transmit, publicly display, and use your User Content in connection with the provision of the Service.</p>
+  </div>
+
+  <div class="section" id="s4">
+    <h2><span class="num">4</span> Fees and Purchase Terms</h2>
+    <h3>4.1 Purchases</h3>
+    <p>In the Service you may purchase, with "real world" money, a limited, personal, non-transferable, non-sublicensable, revocable license to use virtual currency, virtual in-game items, and other goods or services. You are only allowed to purchase Virtual Items from VIRgroup or its authorized partners.</p>
+    <div class="callout">ALL PURCHASES AND REDEMPTIONS OF VIRTUAL ITEMS MADE THROUGH THE SERVICE ARE FINAL AND NON-REFUNDABLE.</div>
+    <h3>4.2 Payment of Fees</h3>
+    <p>You agree to pay all fees and applicable taxes incurred by you or anyone using an Account registered to you. VIRgroup may revise the pricing for the goods and services offered through the Service at any time.</p>
+  </div>
+
+  <div class="section" id="s5">
+    <h2><span class="num">5</span> Updates to the Service</h2>
+    <p>VIRgroup may require that you accept updates to the Service and to VIRgroup's games. You acknowledge and agree that VIRgroup may update the Service with or without notifying you. You may need to update third party software from time to time in order to receive the Service.</p>
+  </div>
+
+  <div class="section" id="s6">
+    <h2><span class="num">6</span> Disclaimer of Warranties</h2>
+    <div class="callout">THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS FOR YOUR USE, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</div>
+  </div>
+
+  <div class="section" id="s7">
+    <h2><span class="num">7</span> Limitation of Liability</h2>
+    <div class="callout">TO THE MAXIMUM EXTENT PERMITTED BY LAW, VIRGROUP SHALL NOT BE LIABLE TO YOU FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, PUNITIVE OR OTHER SIMILAR DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF REVENUES, LOST PROFITS, LOST DATA OR BUSINESS INTERRUPTION.</div>
+    <p>You agree to indemnify, defend and hold VIRgroup (and its officers, directors, agents, subsidiaries, joint ventures and employees) harmless from any claim, demand, damages or other losses, including reasonable attorneys' fees, asserted by any third-party resulting from or arising out of your use of the Service, or any breach by you of these Terms of Service.</p>
+  </div>
+
+  <div class="section" id="s8">
+    <h2><span class="num">8</span> Dispute Resolution and Law</h2>
+    <p>If a dispute arises between you and VIRgroup, we strongly encourage you to first contact us directly via email <strong>support@virgroup.xyz</strong>.</p>
+    <ul>
+      <li><strong>US residents:</strong> governed by California law; disputes resolved by courts in San Francisco, California.</li>
+      <li><strong>Non-US residents:</strong> governed by the laws of Russia; disputes resolved by courts in Moscow, Russia.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s9">
+    <h2><span class="num">9</span> Severability</h2>
+    <p>If any portion of these Terms of Service is found illegal or unenforceable by any court of competent jurisdiction, such provision shall be ineffective solely to the extent of such determination without affecting the remaining provisions, which shall continue to be in full force and effect.</p>
+  </div>
+
+  <div class="section" id="s10">
+    <h2><span class="num">10</span> General Provisions</h2>
+    <h3>10.1 Assignment</h3>
+    <p>VIRgroup may assign or delegate these Terms of Service at any time with or without your consent. You may not assign or delegate any rights or obligations without VIRgroup's prior written consent.</p>
+    <h3>10.2 Supplemental Policies</h3>
+    <p>VIRgroup may publish additional policies related to specific services. Your right to use such services is subject to those specific policies and these Terms of Service.</p>
+    <h3>10.3 Entire Agreement</h3>
+    <p>These Terms of Service and any supplemental policies contain the entire understanding between you and VIRgroup, and supersede all prior understandings relating to the subject matter hereof.</p>
+    <h3>10.4 No Waiver</h3>
+    <p>The failure of VIRgroup to require or enforce strict performance by you of any provision of these Terms of Service shall not be construed as a waiver of VIRgroup's right to assert or rely upon any such provision.</p>
+    <h3>10.5 Notices</h3>
+    <p>VIRgroup may notify you via postings on virgroup.xyz, and via e-mail or any other communications means to contact information you provide to VIRgroup.</p>
+    <h3>10.6 Equitable Remedies</h3>
+    <p>You acknowledge that the rights granted and obligations made under these Terms of Service to VIRgroup are of a unique and irreplaceable nature. VIRgroup shall be entitled to injunctive or other equitable relief in the event of any breach.</p>
+    <h3>10.7 Force Majeure</h3>
+    <p>VIRgroup shall not be liable for any delay or failure to perform resulting from causes outside its reasonable control, including acts of God, war, terrorism, riots, embargoes, fire, floods, accidents, or strikes.</p>
+  </div>
+
+</main>
+
+<footer>
+  <div>© 2024 VIRgroup. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="index.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+</body>
+</html>
